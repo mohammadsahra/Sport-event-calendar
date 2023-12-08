@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Add Sport Event</title>
+</head>
+<body>
+    <a href="../../index.html">back to home</a>
+    <h1>Add Sport Event</h1>
+    <form class="add-form">
+        <div class="section general-info">
+            <!-- Season -->
+            <div class="field">
+                 <label for="season">Season:</label>
+                 <input type="number" id="season" name="season" required min="2010">
+            </div>
+
+            <!-- Status -->
+            <div class="field">
+               <label for="status">Status:</label>
+                <select id="status" name="status" required>
+                    <option value="scheduled">Scheduled</option>
+                    <option value="played">Played</option>
+                </select>  
+            </div>
+           
+            <!-- Time Venue UTC -->
+            <div class="field">
+                <label for="timeVenueUTC">Time Venue UTC:</label>
+                <input type="time" id="timeVenueUTC" name="timeVenueUTC" required>
+            </div>
+
+
+            <!-- Date Venue -->
+            <div class="field">
+               <label for="dateVenue">Date Venue:</label>
+               <input type="date" id="dateVenue" name="dateVenue" required>
+            </div>
+       </div>
+       <hr />
+        <div class="section home-team">
+                <!-- Home Team -->
+                <div class="field">
+                    <label for="homeTeamName">Home Team Name:</label>
+                    <input type="text" id="homeTeamName" name="homeTeamName" required>
+                </div>
+
+                <div class="field">
+                   <label for="homeOfficialName">Home Official Name:</label>
+                   <input type="text" id="homeOfficialName" name="homeOfficialName" >
+                </div>
+
+                <div class="field">
+                    <label for="homeSlug">Home Slug:</label>
+                    <input type="text" id="homeSlug" name="homeSlug" >
+                </div>
+
+                <div class="field">
+                    <label for="homeAbbreviation">Home Abbreviation:</label>
+                    <input type="text" id="homeAbbreviation" name="homeAbbreviation" >
+                </div>
+
+                <div class="field">
+                    <label for="homeTeamCountryCode">Home Team Country Code:</label>
+                    <input type="text" id="homeTeamCountryCode" name="homeTeamCountryCode" >
+                </div>
+
+                <div class="field">
+                    <label for="homeStagePosition">Home Stage Position:</label>
+                    <input type="text" id="homeStagePosition" name="homeStagePosition" >
+                </div>
+        </div>
+        <hr />
+        <div class="section away-team">
+                <!-- Away Team -->
+                <div class="field">
+                        <label for="awayTeamName">Away Team Name:</label>
+                        <input type="text" id="awayTeamName" name="awayTeamName" required> 
+                </div>
+                <div class="field">
+                    <label for="awayOfficialName">Away Official Name:</label>
+                    <input type="text" id="awayOfficialName" name="awayOfficialName" >
+                </div>
+
+                <div class="field">
+                     <label for="awaySlug">Away Slug:</label>
+                      <input type="text" id="awaySlug" name="awaySlug" >
+                </div>
+               
+                <div class="field">
+                    <label for="awayAbbreviation">Away Abbreviation:</label>
+                    <input type="text" id="awayAbbreviation" name="awayAbbreviation" >
+                </div>
+                
+                <div class="field">
+                    <label for="awayTeamCountryCode">Away Team Country Code:</label>
+                     <input type="text" id="awayTeamCountryCode" name="awayTeamCountryCode" >
+                </div>
+               
+                <div class="field">
+                     <label for="awayStagePosition">Away Stage Position:</label>
+                    <input type="text" id="awayStagePosition" name="awayStagePosition" >
+                </div>   
+        </div>
+        <hr />
+        <div class="section result">
+                <!-- Winner -->
+                <div class="field">
+                    <label for="winner">Winner:</label>
+                    <input type="text" id="winner" name="winner">
+                </div>
+
+                <!-- Home Goals -->
+                <div class="field">
+                    <label for="homeGoals">Home Goals:</label>
+                    <input type="number" id="homeGoals" name="homeGoals" required  min="0">
+                </div>
+
+                <!-- Away Goals -->
+                <div class="field">
+                    <label for="awayGoals">Away Goals:</label>
+                    <input type="number" id="awayGoals" name="awayGoals" required min="0">
+                </div>
+ 
+                <!-- Message -->
+                <div class="field">
+                    <label for="message">Message:</label>
+                    <input type="text" id="message" name="message">
+                </div>
+        </div>
+        <hr />
+        <div class="section other-info">
+                <!-- Group -->
+                <div class="field"> 
+                   <label for="group">Group:</label>
+                   <input type="text" id="group" name="group">    
+                </div>
+                
+                <!-- Origin Competition Id -->
+                <div class="field">
+                    <label for="originCompetitionId">Origin Competition Id:</label>
+                    <input type="text" id="originCompetitionId" name="originCompetitionId">   
+                </div>
+
+                <!-- Origin Competition Name -->
+                <div class="field">
+                    <label for="originCompetitionName">Origin Competition Name:</label>
+                    <input type="text" id="originCompetitionName" name="originCompetitionName">   
+                </div>
+        </div>
+        <!-- Submit Button -->
+        <div class="btn-group">
+                 <button type="submit" class="add-match">Add Match</button>
+                 <a type="cancel" class="cancel" href="../../index.html">Cancel</a>
+        </div>
+    </form>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
