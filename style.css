@@ -1,12 +1,8 @@
 body {
-    /* display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;*/
     padding: 10px; 
 }
 button {
     padding: 10px;
-    /* align-self: flex-start; */
 }
 button:hover {
     cursor: pointer;
@@ -39,14 +35,6 @@ th, td {
 .add-form {
     max-width: 800px;
 }
-/* .first-part {
-    display: none;
-    max-width: 400px;
-    grid-template-columns: repeat(1, auto) repeat(1, 230px);
-    gap: 4px;
-    height: auto;
-} */
-
 .general-info, .home-team, .away-team, .result, .other-info {
    display: flex;
    flex-direction: column;
@@ -57,9 +45,6 @@ th, td {
     display: grid;
     grid-template-columns: repeat(2, minmax(180px, auto));
 }
-/* .section {
-    margin-top: 20px;
-} */
 .cancel {
     padding: 10px;
     align-self: flex-start;
@@ -75,4 +60,17 @@ th, td {
 }
 .btn-group {
     margin-top: 20px;
+}
+.details-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.details-item {
+    margin-bottom: 10px;
+}
+
+.details-label {
+    font-weight: bold;
 }

@@ -6,13 +6,9 @@ const result = document.querySelector(".result");
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    
-    // document.addEventListener("change", (e) => {
-    //     result.style.display = e.target.value === "scheduled" ? "none": "grid";
-    // });
+
 
     addForm.addEventListener("submit", (e) => {
-        //e.preventDefault();
 
         const season = document.getElementById('season').value;
         const timeVenueUTC = document.getElementById('timeVenueUTC').value;
@@ -75,12 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         const data = sessionStorage.getItem('sport-events-data');
-        sessionStorage.setItem('sport-events-data', JSON.stringify(
-            [
-                ...JSON.parse(data),
-                 newMatch
-                ]
-                )
-            );
+        const newData =  JSON.parse(data).concat(newMatch);
+        sessionStorage.setItem('sport-events-data', JSON.stringify(newData));
       })
 });

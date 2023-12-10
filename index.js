@@ -1,7 +1,6 @@
 import sportData from "./mockData/sportData.json" assert { type: "json" };
 
 const headers = ["match","season", "time", "status", "winner", "result"];
-//const result = document.querySelector(".result");
 
 function createTable() {
     const table = document.querySelector('.sport-table');
@@ -25,20 +24,14 @@ function createTable() {
         row.insertCell().textContent = match["status"] === "played" ? match["result"]?.winner:  "-";
         row.insertCell().textContent = match["status"] === "played" ? match["result"]?.homeGoals + " , "+match["result"]?.awayGoals : "-";
         const detail = document.createElement('a');
-        //detail.setAttribute("href", `./pages/detail/timeVenueUTC:${}`);
-        detail.setAttribute("target", "_blank");
+        detail.setAttribute("href", `./pages/detail/index.html?timeVenueUTC=${match["timeVenueUTC"]}&dateVenue=${match["dateVenue"]}`);
         detail.innerHTML = "detail";
         row.insertCell().appendChild(detail);
     });
 
-    // Append the table to the body
-    //document.body.appendChild(table);
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-    // document.addEventListener("change", (e) => {
-    //     result.style.display = e.target.value === "scheduled" ? "none": "grid";
-    // });
 
     const data = sessionStorage.getItem('sport-events-data');
     if(!data) {
